@@ -23,8 +23,10 @@ export function Navbar() {
     <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4">
       <motion.header
         initial={{ width: "90%" }}
-        animate={{
+        animate={{  
           width: scrolled ? "50%" : "95%",
+          paddingBottom: scrolled ? "10px" : "3px",
+          paddingTop: scrolled ? "10px" : "3px",
           backgroundColor: scrolled ? "#000000" : "#FFFFFF4D",
         }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
