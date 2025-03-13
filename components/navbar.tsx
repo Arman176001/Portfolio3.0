@@ -1,29 +1,29 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { motion } from "framer-motion"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 130
+      const isScrolled = window.scrollY > 130;
       if (isScrolled !== scrolled) {
-        setScrolled(isScrolled)
+        setScrolled(isScrolled);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [scrolled])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [scrolled]);
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4">
       <motion.header
         initial={{ width: "90%" }}
-        animate={{  
+        animate={{
           width: scrolled ? "50%" : "95%",
           paddingBottom: scrolled ? "10px" : "3px",
           paddingTop: scrolled ? "10px" : "3px",
@@ -63,12 +63,16 @@ export function Navbar() {
           >
             {[
               { name: "Home", href: "/", active: true },
-              { name: "Cases", href: "/cases" },
+              { name: "Projects", href: "/cases" },
               { name: "About", href: "/about" },
-              { name: "Article", href: "/article" },
+              { name: "Resume", href: "/article" },
               { name: "Contact", href: "/contact" },
             ].map((item) => (
-              <Link key={item.name} href={item.href} className="relative font-medium">
+              <Link
+                key={item.name}
+                href={item.href}
+                className="relative font-medium"
+              >
                 {item.name}
                 {item.active && (
                   <motion.span
@@ -89,12 +93,18 @@ export function Navbar() {
               animate={{
                 backgroundColor: scrolled ? "#ffffff" : "#000000",
                 color: scrolled ? "#000000" : "#ffffff",
+                paddingBottom: scrolled ? "0.9rem" : "0.5rem",
+                paddingTop: scrolled ? "0.9rem" : "0.5rem",
               }}
               transition={{ duration: 0.3 }}
-              className="rounded-md"
+              className="rounded-4xl"
             >
-              <Link href="/remix" className="inline-block px-6 py-2 font-medium">
-                Remix template
+              <Link
+                href="/remix"
+                className="px-8 font-medium flex items-center space-x-2"
+              >
+                  <img src="/github.svg" className="w-6 h-6 bg-white rounded-full mr-3" />
+                GitHub
               </Link>
             </motion.div>
           </div>
@@ -114,12 +124,16 @@ export function Navbar() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </motion.button>
         </div>
       </motion.header>
     </div>
-  )
+  );
 }
-
