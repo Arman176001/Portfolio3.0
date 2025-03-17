@@ -7,7 +7,7 @@ const Hero1 = () => {
       className="flex justify-center items-center pt-16 sm:pt-20 md:pt-20 lg:pt-32 px-4 sm:px-6"
       id="home"
     >
-      <div className="w-full max-w-6xl min-h-[80vh] sm:min-h-[90vh] md:h-screen">
+      <div className="w-full max-w-6xl">
         <div className="hidden lg:block absolute w-[120px] lg:w-[250px] top-16 right-8 lg:right-80 z-10">
           <img
             src="/black.png"
@@ -30,7 +30,7 @@ const Hero1 = () => {
             className="w-full h-auto"
           />
         </motion.div>
-        <div className="bg-[#1a1a1a] rounded-xl sm:rounded-2xl md:rounded-3xl h-[75%] md:h-[85%] lg:h-[75%] px-4 sm:px-8 md:px-16 py-8 sm:py-12 md:py-0 relative overflow-hidden">
+        <div className="bg-[#1a1a1a] rounded-xl sm:rounded-2xl md:rounded-3xl h-[75vh] md:h-[85vh] lg:h-[75vh] px-4 sm:px-8 md:px-16 py-8 sm:py-12 md:py-0 relative overflow-hidden">
           {/* Images - Responsive visibility based on screen size */}
           {/* Only show unique.png on medium and large screens */}
 
