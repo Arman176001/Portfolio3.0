@@ -19,7 +19,7 @@ export const projects: ProjectCard[] = [
         description: "An AI-powered education assistant designed to personalize learning experiences.",
         icon: <BrainCircuit className="h-5 w-5" />,
         bgColor: "bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-950/30 dark:to-indigo-950/30",
-        image: "/image/drona.png",
+        image: "/image/Drona.png",
         techStack: [
             { name: "Python", icon: "/icons/python.svg" },
             { name: "LangChain", icon: "/icons/langchain.svg" },
@@ -95,7 +95,7 @@ export const projects: ProjectCard[] = [
         description: "Performing sentiment analysis on YouTube comments using NLP.",
         icon: <MessageSquareText className="h-5 w-5" />,
         bgColor: "bg-gradient-to-br from-pink-50 to-red-50 dark:from-pink-950/30 dark:to-red-950/30",
-        image: "/image/LoopBack.png",
+        image: "/image/Loopback.png",
         techStack: [
             { name: "Hugging Face", icon: "/icons/hugging-face.svg" },
             { name: "Llama", icon: "/icons/meta.svg" },
