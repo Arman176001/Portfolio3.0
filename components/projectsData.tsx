@@ -81,7 +81,7 @@ export const projects: ProjectCard[] = [
         description: "An AI agent trained to play Flappy Bird using reinforcement learning.",
         icon: <Gamepad2 className="h-5 w-5" />,
         bgColor: "bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-950/30 dark:to-orange-950/30",
-        image: "/image/FlappyBirdAI.jpg",
+        image: "/image/FlappyBirdAI.png",
         techStack: [
             { name: "Python", icon: "/icons/python.svg" },
             { name: "PyTorch", icon: "/icons/pytorch.svg" },

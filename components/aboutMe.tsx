@@ -33,7 +33,7 @@ const AboutMe = () => {
           <div className="md:col-span-7 order-1 md:order-2 space-y-4">
             <div className="space-y-4">
               <p className="text-base sm:text-lg leading-relaxed font-light">
-                Hey there! I'm <span className="font-medium">Arman Chaudhary</span>, an AI/ML Developer and Web
+                Hey there! I'm <span className="font-medium">Arman Chaudhary</span>, an AI/ML and Web
                 Developer from India, currently pursuing Computer Science at <span className="font-medium">PEC</span>. I
                 specialize in AI-driven applications, full-stack web development, and data science. Passionate about
                 blending technology with real-world impact, I aim to create intelligent and efficient solutions through

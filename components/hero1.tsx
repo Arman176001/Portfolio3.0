@@ -64,7 +64,7 @@ const Hero1 = () => {
               <p className="text-[#E6E6E6] font-manrope text-sm sm:text-base">
                 <span className="font-semibold">Hi, I am Arman Chaudhary</span>{" "}
                 <br className="sm:hidden" />
-                AI/ML Developer, Research Fellow at PEC, building intelligent
+                AI/ML Developer, building intelligent
                 solutions with Machine Learning and AI.
                 <br className="hidden sm:block" /> Passionate about research,
                 innovation, and creating impactful technology.
