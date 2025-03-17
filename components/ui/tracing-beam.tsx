@@ -24,6 +24,16 @@ export const TracingBeam = ({
     if (contentRef.current) {
       setSvgHeight(contentRef.current.offsetHeight)
     }
+
+    // Update height on resize
+    const handleResize = () => {
+      if (contentRef.current) {
+        setSvgHeight(contentRef.current.offsetHeight)
+      }
+    }
+
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
   }, [])
 
   const y1 = useSpring(useTransform(scrollYProgress, [0, 0.8], [50, svgHeight - 50]), {
@@ -38,7 +48,7 @@ export const TracingBeam = ({
 
   return (
     <motion.div ref={ref} className={`relative ${className}`}>
-      <div className="absolute -left-3 md:left-1/2 md:-ml-[1px] h-full">
+      <div className="absolute -left-2 sm:-left-3 md:left-1/2 md:-ml-[1px] h-full">
         <svg viewBox={`0 0 20 ${svgHeight}`} width="20" height={svgHeight} className="block" aria-hidden="true">
           <motion.path
             d={`M 10,0 L 10,${svgHeight}`}
@@ -69,7 +79,7 @@ export const TracingBeam = ({
           <motion.circle cx="10" cy={y2} r="2" fill="currentColor" className="fill-primary" />
         </svg>
       </div>
-      <div ref={contentRef} className="ml-5 md:ml-0">
+      <div ref={contentRef} className="ml-4 sm:ml-5 md:ml-0">
         {children}
       </div>
     </motion.div>
