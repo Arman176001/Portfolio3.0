@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { BrainCircuit, EyeOff, Code, Camera, Gamepad2, Image, MessageSquareText } from "lucide-react"
+import { BrainCircuit, EyeOff, Code, Camera, Gamepad2, Image, MessageSquareText, Wrench } from "lucide-react"
 
 export interface ProjectCard {
     title: string
@@ -75,6 +75,18 @@ export const projects: ProjectCard[] = [
             { name: "React", icon: "/icons/react.svg" },
         ],
         link : "https://github.com/kaavya7705/twacha-ai"
+    },
+    {
+        title: "FineTuned Llama 3 ",
+        description: "Finetuned llama 3.3 8B on Algebra dataset for better explaination",
+        icon: <Wrench className="h-5 w-5" />,
+        bgColor: "bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-950/30 dark:to-orange-950/30",
+        techStack: [
+            { name: "PyTorch", icon: "/icons/pytorch.svg" },
+            { name: "Python", icon: "/icons/python.svg" },
+            { name: "Unsloth", icon: "/icons/unsloth.png" },
+        ],
+        link : "https://huggingface.co/Arman176/Llama-Algebra/tree/main"
     },
     {
         title: "FlappyBird AI",
