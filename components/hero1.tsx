@@ -55,7 +55,7 @@ const Hero1 = () => {
           </div>
 
           {/* Content layout - adjusted for better spacing on mobile */}
-          <div className="flex flex-col justify-center h-full md:max-w-[80%] lg:max-w-[60%] relative z-20">
+          <div className="flex flex-col justify-center h-full md:max-w-[82%] lg:max-w-[60%] relative z-20">
             <h1 className="text-white font-manrope font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight">
               Shaping the Future with AI <br className="hidden sm:block" />
               Crafting Intelligence Beyond Limits.

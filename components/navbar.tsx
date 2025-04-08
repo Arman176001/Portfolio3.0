@@ -1,41 +1,49 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useRef, type MouseEvent } from "react"
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { Menu, X } from "lucide-react"
+import { useState, useEffect, useRef, type MouseEvent } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 export function Navbar() {
   // Custom debounce function
-  function debounce<T extends (...args: any[]) => any>(func: T, wait: number): (...args: Parameters<T>) => void {
-    let timeout: ReturnType<typeof setTimeout> | null = null
+  function debounce<T extends (...args: any[]) => any>(
+    func: T,
+    wait: number
+  ): (...args: Parameters<T>) => void {
+    let timeout: ReturnType<typeof setTimeout> | null = null;
 
     return (...args: Parameters<T>) => {
       const later = () => {
-        timeout = null
-        func(...args)
-      }
+        timeout = null;
+        func(...args);
+      };
 
-      if (timeout) clearTimeout(timeout)
-      timeout = setTimeout(later, wait)
-    }
+      if (timeout) clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
   }
 
-  const [scrolled, setScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState("home")
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // References to track sections
   type SectionRefs = {
-    [K in "home" | "about" | "projects" | "resume" | "contact"]: HTMLElement | null
-  }
+    [K in
+      | "home"
+      | "about"
+      | "projects"
+      | "resume"
+      | "contact"]: HTMLElement | null;
+  };
   const sectionRefs = useRef<SectionRefs>({
     home: null,
     about: null,
     projects: null,
     resume: null,
     contact: null,
-  })
+  });
 
   // Navigation items
   const navItems = [
@@ -44,35 +52,38 @@ export function Navbar() {
     { name: "Projects", href: "#projects", id: "projects" },
     { name: "Work Experience", href: "#experience", id: "experience" },
     { name: "Connect", href: "#contact", id: "contact" },
-  ]
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 130
+      const isScrolled = window.scrollY > 130;
       if (isScrolled !== scrolled) {
-        setScrolled(isScrolled)
+        setScrolled(isScrolled);
       }
 
       // Check if we're at the top of the page
       if (window.scrollY < 50) {
-        setActiveSection("home")
+        setActiveSection("home");
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [scrolled])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [scrolled]);
 
   // Smooth scroll to section when clicking nav links
-  const scrollToSection = (e: MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-    e.preventDefault()
-    const element = document.getElementById(sectionId)
+  const scrollToSection = (
+    e: MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-      setActiveSection(sectionId) // Immediately update active section on click
-      setMobileMenuOpen(false) // Close mobile menu after clicking
+      element.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(sectionId); // Immediately update active section on click
+      setMobileMenuOpen(false); // Close mobile menu after clicking
     }
-  }
+  };
 
   // Close mobile menu when window is resized to desktop size
   useEffect(() => {
@@ -81,21 +92,21 @@ export function Navbar() {
       // Force a re-render to update width calculations
       setScrolled((prevScrolled) => {
         // Toggle the value to force a re-render
-        const currentScroll = window.scrollY > 130
-        return currentScroll
-      })
+        const currentScroll = window.scrollY > 130;
+        return currentScroll;
+      });
 
       // Also close mobile menu if needed
       if (window.innerWidth >= 768 && mobileMenuOpen) {
-        setMobileMenuOpen(false)
+        setMobileMenuOpen(false);
       }
-    }, 100)
+    }, 100);
 
-    window.addEventListener("resize", handleResizeDebounced)
+    window.addEventListener("resize", handleResizeDebounced);
     return () => {
-      window.removeEventListener("resize", handleResizeDebounced)
-    }
-  }, [mobileMenuOpen])
+      window.removeEventListener("resize", handleResizeDebounced);
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <div className="flex justify-center">
@@ -107,10 +118,10 @@ export function Navbar() {
               ? window.innerWidth < 640
                 ? "95%"
                 : window.innerWidth < 768
-                  ? "90%"
-                  : window.innerWidth < 1024
-                    ? "80%"
-                    : "70%"
+                ? "90%"
+                : window.innerWidth < 1024
+                ? "87%"
+                : "79%"
               : "95%",
             paddingBottom: scrolled ? "8px" : "3px",
             paddingTop: scrolled ? "8px" : "3px",
@@ -122,7 +133,11 @@ export function Navbar() {
           <div className="px-2 sm:px-3 rounded-full flex items-center justify-between">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Link href="/" className="block" onClick={(e) => scrollToSection(e, "home")}>
+              <Link
+                href="/"
+                className="block"
+                onClick={(e) => scrollToSection(e, "home")}
+              >
                 <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black transition hover:-rotate-45 duration-200">
                   <svg
                     viewBox="0 0 24 24"
@@ -164,6 +179,12 @@ export function Navbar() {
                   )}
                 </Link>
               ))}
+              <Link
+                href="https://drive.google.com/file/d/1W-XRWdnnYX8TKEV5iP1Tsi9xHlC2KmYG/view?usp=sharing"
+                className="relative font-medium text-sm lg:text-base px-2 py-1 hover:bg-black/10 rounded-md transition-colors duration-200"
+              >
+                Resume
+              </Link>
             </motion.nav>
 
             {/* CTA Button - Desktop */}
@@ -207,7 +228,11 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
-              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {mobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </motion.button>
           </div>
         </motion.header>
@@ -235,12 +260,20 @@ export function Navbar() {
                   href={item.href}
                   onClick={(e) => scrollToSection(e, item.id)}
                   className={`text-white font-medium text-lg py-2 w-full text-center border-b border-gray-800 transition-colors duration-200 ${
-                    activeSection === item.id ? "border-white" : "border-gray-800"
+                    activeSection === item.id
+                      ? "border-white"
+                      : "border-gray-800"
                   }`}
                 >
                   {item.name}
                 </Link>
               ))}
+              <Link
+                href="https://drive.google.com/file/d/1W-XRWdnnYX8TKEV5iP1Tsi9xHlC2KmYG/view?usp=sharing"
+                className="text-white font-medium text-lg py-2 w-full text-center border-b border-gray-800 transition-colors duration-200"
+              >
+                Resume
+              </Link>
 
               <Link
                 href="https://github.com/Arman176001"
@@ -263,6 +296,5 @@ export function Navbar() {
         )}
       </div>
     </div>
-  )
+  );
 }
-
