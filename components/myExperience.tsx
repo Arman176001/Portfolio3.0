@@ -11,7 +11,15 @@ export const Experience = () => {
       company: "Punjab Engineering College",
       location: "Chandigarh, India",
       period: "2025",
-      description: "Advancing AI research in the agricultural sector to drive innovation and efficiency.",
+      description: "Leading analysis of CDR (Call Detail Record) datasets, identifying behavioral trends using clustering, temporal pattern mining, and supervised learning for applications in telecom and urban planning.",
+      skills: ["Deep Learning", "Research", "Academic Writing"],
+    },
+    {
+      title: "Research Fellow",
+      company: "Punjab Engineering College",
+      location: "Chandigarh, India",
+      period: "2025",
+      description: "Conducting research on Crop Life Prediction in Storage Facilities, developing machine learning models to predict the shelf life of stored crops using environmental and historical data, aimed at reducing food wastage and improving supply chain logistics.",
       skills: ["Neural Networks", "Research", "Academic Writing"],
     },
   ]

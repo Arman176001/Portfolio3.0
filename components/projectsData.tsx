@@ -15,6 +15,19 @@ export interface ProjectCard {
 
 export const projects: ProjectCard[] = [
     {
+        title: "Oxidize",
+        description: "A open source custom transformer model inspired from alphaCode made for code translation to Rust.",
+        icon: <BrainCircuit className="h-5 w-5" />,
+        bgColor: "bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-950/30 dark:to-indigo-950/30",
+        image: "/image/Oxidize.png",
+        techStack: [
+            { name: "Python", icon: "/icons/python.svg" },
+            { name: "Pytorch", icon: "/icons/pytorch.svg" },
+            { name: "Deepmind", icon: "/icons/deepmind.svg" },
+        ],
+        link : "https://oxidize-web.vercel.app/"
+    },
+    {
         title: "Drona",
         description: "An AI-powered education assistant designed to personalize learning experiences.",
         icon: <BrainCircuit className="h-5 w-5" />,

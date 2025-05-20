@@ -269,7 +269,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Link
-                href="https://drive.google.com/file/d/1W-XRWdnnYX8TKEV5iP1Tsi9xHlC2KmYG/view?usp=sharing"
+                href="https://drive.google.com/file/d/1GNZJ1LPRDWdAg7WAP5XUv84iLg47sYpX/view?usp=sharing"
                 className="text-white font-medium text-lg py-2 w-full text-center border-b border-gray-800 transition-colors duration-200"
               >
                 Resume

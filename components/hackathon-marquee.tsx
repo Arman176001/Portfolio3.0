@@ -2,7 +2,7 @@
 
 import type React from "react";
 import { motion } from "framer-motion";
-import { Lightbulb, Code, Zap, Rocket, Target } from "lucide-react";
+import { Lightbulb, Code, Zap, Rocket, Target, DatabaseZap, NotebookPen } from "lucide-react";
 
 interface HackathonProps {
   name: string;
@@ -16,7 +16,7 @@ const HackathonBlock = ({ hackathon }: { hackathon: HackathonProps }) => {
     <div className="flex-shrink-0 w-72 h-40 m-3 p-5 bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between">
       <div className="flex justify-between items-start">
         <h3 className="font-bold text-lg text-gray-900 dark:text-white font-manrope">
-          {hackathon.name}
+          <pre>{hackathon.name}</pre>
         </h3>
         <div className="text-primary">{hackathon.icon}</div>
       </div>
@@ -48,6 +48,13 @@ export const HackathonMarquee = () => {
       achievement: "Best AI Model",
       icon: <Zap className="w-5 h-5" />,
     },
+    {
+      name: "Goldman Sachs India \nHackathon",
+      year: "2025",
+      achievement: "Top 300",
+      icon: <DatabaseZap className="w-5 h-5" />,
+    },
+    { name: "HackMol", year:"2025", icon:<NotebookPen className="w-5 h-5"/>},
     { name: "NightSprint", year: "2024", icon: <Rocket className="w-5 h-5" /> },
     { name: "HackToHatch", year: "2023", icon: <Target className="w-5 h-5" /> },
   ];
