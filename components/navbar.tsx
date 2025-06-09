@@ -269,13 +269,6 @@ export function Navbar() {
                 </Link>
               ))}
               <Link
-                href="https://drive.google.com/file/d/1GNZJ1LPRDWdAg7WAP5XUv84iLg47sYpX/view?usp=sharing"
-                className="text-white font-medium text-lg py-2 w-full text-center border-b border-gray-800 transition-colors duration-200"
-              >
-                Resume
-              </Link>
-
-              <Link
                 href="https://github.com/Arman176001"
                 className="flex items-center justify-center text-white font-medium text-lg py-2 sm:py-3 px-6 sm:px-8 bg-gray-800 rounded-full mt-4 hover:bg-gray-700 transition-colors duration-200"
                 target="_blank"
