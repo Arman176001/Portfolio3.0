@@ -15,12 +15,12 @@ export const Experience = () => {
       skills: ["Deep Learning", "Research", "Academic Writing"],
     },
     {
-      title: "Research Fellow",
+      title: "Research Assistant",
       company: "Punjab Engineering College",
       location: "Chandigarh, India",
       period: "2025",
-      description: "Conducting research on Crop Life Prediction in Storage Facilities, developing machine learning models to predict the shelf life of stored crops using environmental and historical data, aimed at reducing food wastage and improving supply chain logistics.",
-      skills: ["Neural Networks", "Research", "Academic Writing"],
+      description: "“Deep Learning for Precipitation Nowcasting.” Focused on developing models to improve the accuracy of short-term weather forecasting using deep learning techniques.",
+      skills: ["Deep Learning", "Research", "Academic Writing"],
     },
   ]
 
