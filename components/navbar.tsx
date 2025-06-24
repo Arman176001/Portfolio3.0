@@ -34,14 +34,12 @@ export function Navbar() {
       | "home"
       | "about"
       | "projects"
-      | "resume"
       | "contact"]: HTMLElement | null;
   };
   const sectionRefs = useRef<SectionRefs>({
     home: null,
     about: null,
     projects: null,
-    resume: null,
     contact: null,
   });
 
@@ -179,12 +177,6 @@ export function Navbar() {
                   )}
                 </Link>
               ))}
-              <Link
-                href="https://drive.google.com/file/d/1W-XRWdnnYX8TKEV5iP1Tsi9xHlC2KmYG/view?usp=sharing"
-                className="relative font-medium text-sm lg:text-base px-2 py-1 hover:bg-black/10 rounded-md transition-colors duration-200"
-              >
-                Resume
-              </Link>
             </motion.nav>
 
             {/* CTA Button - Desktop */}
