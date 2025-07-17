@@ -67,7 +67,7 @@ const Hero1 = () => {
                 AI/ML Developer, building intelligent
                 solutions with Machine Learning and AI.
                 <br className="hidden sm:block" /> Passionate about research,
-                innovation, and creating impactful technology.
+                innovation and creating impactful technology.
               </p>
             </div>
             <div className="py-5 relative top-0 sm:top-4 md:-top-3 lg:top-6">

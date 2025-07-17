@@ -41,16 +41,29 @@ export const projects: ProjectCard[] = [
         link : "https://drona-three.vercel.app/"
     },
     {
+        title: "Hotel Booking Agent",
+        description: "AI-powered hotel booking assistant with real-time integration to Instagram DMs.",
+        icon: <Image className="h-5 w-5" />,
+        bgColor: "bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-950/30 dark:to-blue-950/30",
+        techStack: [
+            { name: "LangGraph", icon: "/icons/langgraph.svg" },
+            { name: "Meta", icon: "/icons/meta.svg" },
+            { name: "FastAPI", icon: "/icons/fastAPI.svg" },
+        ],
+        link : "https://github.com/Arman176001/Hiring_challange/tree/Arman-branch"
+    },
+    {
         title: "Deepfake Detection",
         description: "A model that identifies deepfake videos using AI and computer vision techniques.",
         icon: <EyeOff className="h-5 w-5" />,
         bgColor: "bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/30 dark:to-orange-950/30",
+        image: "/image/Deepfake.png",
         techStack: [
             { name: "PyTorch", icon: "/icons/pytorch.svg" },
             { name: "OpenCV", icon: "/icons/opencv.svg" },
-            { name: "Keras", icon: "/icons/keras.svg" },
+            { name: "Docker", icon: "/icons/docker.svg" },
         ],
-        link : "https://www.kaggle.com/code/armanchaudhary/deepfake-detection-using-cnn-rnn"
+        link : "https://vision-truth-finder.vercel.app/"
     },
     {
         title: "ResNet from Scratch",
@@ -81,7 +94,6 @@ export const projects: ProjectCard[] = [
         description: "A facial dermatologist AI that analyzes skin conditions using computer vision.",
         icon: <Camera className="h-5 w-5" />,
         bgColor: "bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-950/30 dark:to-teal-950/30",
-        image: "/image/TwachaAI.png",
         techStack: [
             { name: "YOLO", icon: "/icons/yolo.svg" },
             { name: "FastAPI", icon: "/icons/fastAPI.svg" },

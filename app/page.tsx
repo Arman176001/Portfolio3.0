@@ -4,6 +4,7 @@ import { Navbar } from "@/components/navbar"
 import BentoGrid from "@/components/projects"
 import { Experience } from "@/components/myExperience"
 import  Follow  from "@/components/follow"
+import { AnimatedTestimonialsDemo } from "@/components/testimonials"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero2/>
       <BentoGrid/>
       <Experience/>
+      {/* <AnimatedTestimonialsDemo/> */}
       <Follow/>
     </main>
   )

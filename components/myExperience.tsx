@@ -15,17 +15,17 @@ export const Experience = () => {
       skills: ["Deep Learning", "Research", "Academic Writing"],
     },
     {
-      title: "Research Assistant",
-      company: "Punjab Engineering College",
-      location: "Chandigarh, India",
+      title: "Founding Engineer - AI Systems Intern",
+      company: "Powersmy.biz",
+      location: "Remote, India",
       period: "2025",
-      description: "“Deep Learning for Precipitation Nowcasting.” Focused on developing models to improve the accuracy of short-term weather forecasting using deep learning techniques.",
-      skills: ["Deep Learning", "Research", "Academic Writing"],
+      description: "Building custom AI agents-based automation systems to streamline workflows for businesses across industries",
+      skills: ["Gen AI", "Research", "LLM's"],
     },
   ]
 
   return (
-    <div id="experience" className="py-8 sm:py-12 md:py-16 px-4 sm:px-6">
+    <div id="experience" className="py-8 sm:py-12 md:py-16 md:pb-4 px-4 sm:px-6">
       <div className="container mx-auto py-8 sm:py-10 md:py-12 max-w-6xl bg-white dark:bg-gray-800 rounded-3xl p-4 sm:p-6 md:p-8 shadow-sm">
         <div className="mb-5 sm:mb-6 md:mb-8 relative flex flex-col items-center">
           <div className="w-full flex justify-between">

@@ -35,7 +35,7 @@ const AboutMe = () => {
               <p className="text-base sm:text-lg leading-relaxed font-light">
                 Hey there! I'm <span className="font-medium">Arman Chaudhary</span>, an AI/ML and Web
                 Developer from India, currently pursuing Computer Science at <span className="font-medium">PEC</span>. I
-                specialize in AI-driven applications, full-stack web development, and data science. Passionate about
+                specialize in AI-driven applications, full-stack web development and data science. Passionate about
                 blending technology with real-world impact, I aim to create intelligent and efficient solutions through
                 AI and software development.
               </p>
@@ -81,7 +81,7 @@ const AboutMe = () => {
                   {" "}
                   contributing to research, industry projects and innovative application
                 </span>
-                . My focus is on staying at the forefront of AI advancements, improving system efficiency, and
+                . My focus is on staying at the forefront of AI advancements, improving system efficiency and
                 developing scalable, intelligent solutions for practical use.
               </p>
             </div>
